@@ -1,6 +1,8 @@
 import { useState } from "react";
 import axios from "axios";
 import swal from "sweetalert";
+import "./css/AddUser.css";
+import myImage from "./images/sample.png";
 
 const AddUser = () => {
   const [formData, setFormData] = useState({
@@ -22,7 +24,19 @@ const AddUser = () => {
         email: "",
       });
     } catch (error) {
-      swal(error.name, error.message, "error");
+      if (
+        formData.name === "" ||
+        formData.password === "" ||
+        formData.email === ""
+      ) {
+        swal(
+          "Input fields empty!",
+          "Please enter valid information in the input fields!",
+          "error"
+        );
+      } else {
+        swal(error.name, error.message, "error");
+      }
     }
   };
 
@@ -48,33 +62,42 @@ const AddUser = () => {
   };
 
   return (
-    <div>
-      <form>
-        <label htmlFor="">Name:</label>
-        <input
-          type="text"
-          placeholder="Enter Name here"
-          name="name"
-          onChange={handleNameChange}
-          value={formData.name}
-        />
-        <label htmlFor="">Email:</label>
-        <input
-          type="email"
-          placeholder="Enter Email here"
-          name="email"
-          onChange={handleEmailChange}
-          value={formData.email}
-        />
-        <label htmlFor="">Password: </label>
-        <input
-          type="password"
-          placeholder="Enter password here"
-          name="password"
-          onChange={handlePasswordChange}
-          value={formData.password}
-        />
-        <button onClick={handleSubmit}>Submit</button>
+    <div className="adduser_body">
+      <form onSubmit={handleSubmit} className="form">
+        <div className="image_container">
+          <img src={myImage} alt="cover_image" />
+        </div>
+        <div className="row">
+          <label htmlFor="">Name:</label>
+          <input
+            type="text"
+            placeholder="Enter Name here"
+            name="name"
+            onChange={handleNameChange}
+            value={formData.name}
+          />
+        </div>
+        <div className="row">
+          <label htmlFor="">Email:</label>
+          <input
+            type="email"
+            placeholder="Enter Email here"
+            name="email"
+            onChange={handleEmailChange}
+            value={formData.email}
+          />
+        </div>
+        <div className="row">
+          <label htmlFor="">Password: </label>
+          <input
+            type="password"
+            placeholder="Enter password here"
+            name="password"
+            onChange={handlePasswordChange}
+            value={formData.password}
+          />
+        </div>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
