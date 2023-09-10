@@ -1,0 +1,49 @@
+.main_div_container {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    /* Vertically center the content */
+}
+
+.main_div_container img {
+    height: 80px;
+}
+
+.account_name {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.account_email {
+    font-family: 'Merriweather', serif;
+}
+
+.details {
+    margin-right: 50px;
+}
+
+.item {
+    display: flex;
+    flex-grow: 1;
+    /* Allow the content to grow and take available space */
+    justify-content: space-between;
+    /* Create space between elements */
+    align-items: center;
+    /* Vertically center the content */
+}
+
+.item svg {
+    width: 30px;
+    /* Adjust the width as needed */
+    height: 30px;
+    /* Adjust the height as needed */
+    margin-left: auto;
+    /* Push the SVG to the right side */
+    fill: #000;
+    /* Change the fill color of the SVG if desired */
+}
+
+.item svg:active {
+    background-color: red;
+}

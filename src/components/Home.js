@@ -3,6 +3,7 @@ import axios from "axios";
 import LoadingScreen from "react-loading-screen";
 import loadingGif from "./images/loading.gif";
 import AccountItem from "./AccountItem";
+import "./css/Home.css";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -42,7 +43,7 @@ const Home = () => {
       <div className="account_item_container">
         {data !== null ? (
           data.map((account) => (
-            <AccountItem key={account.id} account={account} />
+            <AccountItem key={account._id} account={account} />
           ))
         ) : (
           <p>Data is still loading...</p>
