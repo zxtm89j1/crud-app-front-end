@@ -97,7 +97,7 @@ const AddUser = () => {
             value={formData.password}
           />
         </div>
-        <button type="submit">Submit</button>
+        <button type="submit">Create User</button>
       </form>
     </div>
   );

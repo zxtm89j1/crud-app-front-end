@@ -1,0 +1,23 @@
+a {
+    text-decoration: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+a:hover {
+    color: white;
+    background-color: #82888c;
+}
+
+.main_link_div {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    font-family: 'Work Sans', sans-serif;
+    padding: 10px;
+    font-size: 30px;
+    color: black;
+}
