@@ -6,7 +6,8 @@
 }
 
 .main_div_container img {
-    height: 80px;
+    max-height: 80px;
+    max-width: 80px;
 }
 
 .account_name {
@@ -42,6 +43,8 @@
     /* Push the SVG to the right side */
     fill: #000;
     /* Change the fill color of the SVG if desired */
+    max-height: 30px;
+    max-width: 30px;
 }
 
 .item svg:active {
